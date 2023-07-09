@@ -1,0 +1,45 @@
+$dark-blue: #222831;
+$light-blue: #00ADB5;
+$grey: #393E46;
+$white: #EEEEEE;
+
+$main-font: 'Montserrat', sans-serif;
+
+
+body {
+  background-color: $dark-blue;
+}
+
+.spinningFlower {
+  $size: 80px;
+  position: absolute;
+  top: calc(50% - #{$size} / 2);
+  left: calc(50% - #{$size} / 2);
+  width: $size;
+  height: $size;
+  animation: spinAndScale 2s linear infinite alternate;
+}
+
+@keyframes spinAndScale {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(3);
+  }
+}
+
+.buildingPage {
+  text-align: center;
+}
+
+h1.loadingText {
+  margin-top: 20vh;
+  color: $light-blue;
+  font-family: $main-font;
+}
+
+h2.loadingText {
+  color: $white;
+  font-family: $main-font;
+}
