@@ -1,13 +1,12 @@
-import React, { useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useDispatch } from 'react-redux';
+import React, {useRef, useState} from "react";
+import {useNavigate} from "react-router-dom";
+import {useDispatch} from 'react-redux';
 
 function Register() {
     const emailRef = useRef("");
     const firstNameRef = useRef("");
     const lastNameRef = useRef("");
     const passwordRef = useRef("");
-    const [registrationStatus, setRegistrationStatus] = useState(null);
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const [userAlreadyExists, setUserAlreadyExists] = useState(false);
@@ -45,28 +44,21 @@ function Register() {
 
             if (response.ok) {
                 // Handle successful response
-                setRegistrationStatus("success");
                 console.log("Registration successful!");
                 navigate("/home");
                 // Update global registration state
                 try {
                     dispatch({
                         type: 'REGISTER_SUCCESS',
-                        payload: { user: data }, // Pass the user data to the action payload
+                        payload: {user: data}, // Pass the user data to the action payload
                     });
                 } catch (error) {
                     console.log("Error:", error);
                 }
             } else {
                 // Handle error response
-                if (response.status === 409) {
-                    setRegistrationStatus("exists");
-                    console.log("User already exists.");
-                    setUserAlreadyExists(true);
-                } else {
-                    setRegistrationStatus("failed");
-                    console.log("Registration failed.");
-                }
+                console.log("User already exists.");
+                setUserAlreadyExists(true);
             }
         } catch (error) {
             // Handle network error
@@ -79,7 +71,7 @@ function Register() {
         <div>
             <form className="registerForm" onSubmit={handleSubmit}>
                 <div className="titleDiv">
-                    <h1 className="registerTitle">Register {registrationStatus}</h1>
+                    <h1 className="registerTitle">Register</h1>
                 </div>
                 <div className="emailDiv">
                     <label htmlFor="emailInput">email:</label>
