@@ -7,7 +7,7 @@ function Starter() {
     const [backendData, setBackendData] = useState([{}]);
 
     useEffect(() => {
-        fetch("http://localhost:6060/")
+        fetch("https://luminary-backend.onrender.com/")
             .then((res) => res.json())
             .then((data) => setBackendData(data));
     }, []);

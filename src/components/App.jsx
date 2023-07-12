@@ -8,15 +8,6 @@ import Login from "../pages/Login";
 
 
 function App() {
-
-    const [backendData, setBackendData] = useState([{}]);
-
-    useEffect(() => {
-        fetch("https://luminary-backend.onrender.com/")
-            .then((res) => res.json())
-            .then((data) => setBackendData(data));
-    }, []);
-
     return (
         <>
             <Provider store={store}>
