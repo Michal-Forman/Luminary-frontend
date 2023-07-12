@@ -1,5 +1,12 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   background-color: #222831;
+  width: 100%;
+  height: 100%;
 }
 
 .spinningFlower {
@@ -31,6 +38,233 @@ h1.loadingText {
 
 h2.loadingText {
   color: #EEEEEE;
+  font-family: "Montserrat", sans-serif;
+}
+
+.registerForm {
+  width: 400px;
+  position: absolute;
+  top: 20%;
+  left: calc(50% - 400px / 2);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, auto);
+  gap: 20px;
+}
+
+.loginForm {
+  width: 400px;
+  position: absolute;
+  top: 20%;
+  left: calc(50% - 400px / 2);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, auto);
+  gap: 20px;
+}
+
+.registerTitle {
+  color: #EEEEEE;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.registerInput {
+  height: 45px;
+  border-radius: 5px;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  text-indent: 10px;
+}
+.registerInput:focus {
+  outline: #00ADB5 4px solid;
+}
+.registerInput::placeholder {
+  font-style: italic;
+  font-weight: 200;
+}
+
+.registerForm label {
+  color: #EEEEEE;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  align-self: flex-start;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  margin-bottom: 5px;
+}
+
+.loginForm label {
+  color: #EEEEEE;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  align-self: flex-start;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  margin-bottom: 5px;
+}
+
+.titleDiv {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  text-align: center;
+}
+
+.loginTitleDiv {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  text-align: center;
+}
+
+.emailDiv {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+}
+
+.loginEmailDiv {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+}
+
+.firstNameDiv {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  display: flex;
+  flex-direction: column;
+}
+
+.lastNameDiv {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  display: flex;
+  flex-direction: column;
+}
+
+.passwordDiv {
+  grid-column: 1/3;
+  grid-row: 4/5;
+  display: flex;
+  flex-direction: column;
+}
+
+.loginPasswordDiv {
+  grid-column: 1/3;
+  grid-row: 3/4;
+  display: flex;
+  flex-direction: column;
+}
+
+.loginDiv {
+  grid-column: 1/2;
+  grid-row: 5/6;
+  display: flex;
+  flex-direction: column;
+}
+
+.primaryButton {
+  height: 45px;
+  border-radius: 5px;
+  border: none;
+  background-color: #00ADB5;
+  color: #EEEEEE;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+.primaryButton:hover {
+  transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+}
+.primaryButton:active {
+  transform: translateY(5px);
+}
+
+.secondaryButton {
+  height: 45px;
+  border-radius: 5px;
+  border: #00ADB5 2px solid;
+  background-color: #222831;
+  color: #00ADB5;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+.secondaryButton:hover {
+  transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+}
+.secondaryButton:active {
+  transform: translateY(5px);
+}
+
+.registerDiv {
+  grid-column: 2/3;
+  grid-row: 5/6;
+  display: flex;
+  flex-direction: column;
+}
+
+.loginRegisterDiv {
+  grid-column: 1/2;
+  grid-row: 4/5;
+  display: flex;
+  flex-direction: column;
+}
+
+.loginLoginDiv {
+  grid-column: 2/3;
+  grid-row: 4/5;
+  display: flex;
+  flex-direction: column;
+}
+
+.passwordInput {
+  width: calc(400px - 4px);
+  height: calc(45px - 1.5px);
+}
+
+.incorrectPasswordInput {
+  width: calc(400px - 8px);
+  height: calc(45px - 5.5px);
+  border: #FF0000 2px solid;
+}
+
+.togglePasswordButton {
+  position: absolute;
+  top: 323px;
+  left: 360px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+}
+.togglePasswordButton:active {
+  transform: translateY(2px);
+}
+
+.toggleLoginPasswordButton {
+  position: absolute;
+  top: 232px;
+  left: 360px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+  Z-index: 1;
+}
+.toggleLoginPasswordButton:active {
+  transform: translateY(2px);
+}
+
+.errorMessage {
+  color: #FF0000;
   font-family: "Montserrat", sans-serif;
 }
 
