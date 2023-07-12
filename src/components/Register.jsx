@@ -34,7 +34,7 @@ function Register() {
         };
 
         try {
-            const response = await fetch("https://luminary-backend.onrender.com/", {
+            const response = await fetch("https://luminary-backend.onrender.com/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

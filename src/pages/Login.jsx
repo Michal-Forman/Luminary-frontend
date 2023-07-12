@@ -31,7 +31,7 @@ function Login() {
         };
 
         try {
-            const response = await fetch("https://luminary-backend.onrender.com/", {
+            const response = await fetch("https://luminary-backend.onrender.com/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
