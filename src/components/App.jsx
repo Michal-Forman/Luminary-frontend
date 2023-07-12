@@ -20,7 +20,7 @@ function App() {
     return (
         <>
             <Provider store={store}>
-                <Router>
+                <Router basename="/Luminary-frontend">
                     <Routes>
                         <Route exact path="/" element={<Starter/>}/>
                         <Route exact path="/home" element={<Home/>}/>
