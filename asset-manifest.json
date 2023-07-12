@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Luminary-frontend/static/css/main.6c4ded62.css",
-    "main.js": "/Luminary-frontend/static/js/main.24311972.js",
+    "main.js": "/Luminary-frontend/static/js/main.46046410.js",
     "static/media/flower.png": "/Luminary-frontend/static/media/flower.76df6206effc9fb7b28f.png",
     "static/media/passwordEye.png": "/Luminary-frontend/static/media/passwordEye.fe4641c70574f8f8799f.png",
     "index.html": "/Luminary-frontend/index.html",
     "main.6c4ded62.css.map": "/Luminary-frontend/static/css/main.6c4ded62.css.map",
-    "main.24311972.js.map": "/Luminary-frontend/static/js/main.24311972.js.map"
+    "main.46046410.js.map": "/Luminary-frontend/static/js/main.46046410.js.map"
   },
   "entrypoints": [
     "static/css/main.6c4ded62.css",
-    "static/js/main.24311972.js"
+    "static/js/main.46046410.js"
   ]
 }
