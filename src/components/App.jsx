@@ -30,6 +30,4 @@ function App() {
 
 export default App;
 
-// https://luminary-backend.onrender.com/
-// http://localhost:6060/
 // "homepage": "https://michal-forman.github.io/Luminary-frontend/",
