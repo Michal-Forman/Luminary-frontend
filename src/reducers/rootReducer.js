@@ -1,5 +1,5 @@
 // reducers/index.js
-import { combineReducers } from 'redux';
+import {combineReducers} from 'redux';
 
 const initialState = {
     isAuthenticated: false,
@@ -14,6 +14,12 @@ const authReducer = (state = initialState, action) => {
                 isAuthenticated: true,
                 user: action.payload.user,
             };
+        case 'LOGIN_SUCCESS':
+            return {
+                ...state,
+                isAuthenticated: true,
+                user: action.payload.user,
+            }
         // Add other cases as needed for login, logout, etc.
         default:
             return state;

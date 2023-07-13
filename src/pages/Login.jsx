@@ -1,6 +1,8 @@
 import React, {useRef, useState} from "react";
-import {useNavigate} from "react-router-dom";
+import {json, useNavigate} from "react-router-dom";
 import {useDispatch} from 'react-redux';
+import BackendUrl from "../components/Config";
+import backendUrl from "../components/Config";
 
 function Login() {
 
@@ -31,7 +33,7 @@ function Login() {
         };
 
         try {
-            const response = await fetch("https://luminary-backend.onrender.com/login", {
+            const response = await fetch(`${backendUrl}/login`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -42,16 +44,19 @@ function Login() {
             if (response.ok) {
                 // Handle successful response
                 console.log("Login successful!");
-                navigate("/home");
+                const jsonData = await response.json();
+                console.log("User data:", jsonData.message);
                 // Update global registration state
                 try {
                     dispatch({
-                        type: 'REGISTER_SUCCESS',
-                        payload: {user: data}, // Pass the user data to the action payload
+                        type: "LOGIN_SUCCESS",
+                        payload: {user: jsonData.message}, // Pass the user data to the action payload
                     });
                 } catch (error) {
                     console.log("Error:", error);
                 }
+                // Navigate to home page
+                navigate("/home");
             } else {
                 // Handle error response
                 console.log("Wrong user details!");

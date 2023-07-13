@@ -5,17 +5,21 @@ import store from '../store/store';
 import Home from "../pages/Home";
 import Starter from "../pages/Starter";
 import Login from "../pages/Login";
-
+import Journal from "../pages/Journal";
+import Profile from "../pages/Profile";
+import {frontendBaseName} from "./Config";
 
 function App() {
     return (
         <>
             <Provider store={store}>
-                <Router basename="/Luminary-frontend">
+                <Router basename={frontendBaseName}>
                     <Routes>
                         <Route exact path="/" element={<Starter/>}/>
                         <Route exact path="/home" element={<Home/>}/>
-                        <Route exact path="login" element={<Login/>}/>
+                        <Route exact path="/login" element={<Login/>}/>
+                        <Route exact path="/journal" element={<Journal/>}/>
+                        <Route exact path="/profile" element={<Profile/>} />
                     </Routes>
                 </Router>
             </Provider>

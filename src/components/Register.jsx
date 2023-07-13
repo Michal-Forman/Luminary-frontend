@@ -1,6 +1,7 @@
 import React, {useRef, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {useDispatch} from 'react-redux';
+import BackendUrl from "./Config";
 
 function Register() {
     const emailRef = useRef("");
@@ -34,7 +35,7 @@ function Register() {
         };
 
         try {
-            const response = await fetch("https://luminary-backend.onrender.com/register", {
+            const response = await fetch(`${BackendUrl}/register`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -43,18 +44,21 @@ function Register() {
             });
 
             if (response.ok) {
+                const dataWithoutPassword = { password, ...data };
+                delete dataWithoutPassword.password;
                 // Handle successful response
+                console.log(dataWithoutPassword);
                 console.log("Registration successful!");
-                navigate("/home");
                 // Update global registration state
                 try {
                     dispatch({
                         type: 'REGISTER_SUCCESS',
-                        payload: {user: data}, // Pass the user data to the action payload
+                        payload: {user: dataWithoutPassword}, // Pass the user data to the action payload
                     });
                 } catch (error) {
                     console.log("Error:", error);
                 }
+                navigate("/home");
             } else {
                 // Handle error response
                 console.log("User already exists.");

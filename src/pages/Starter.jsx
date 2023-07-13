@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Building from "../components/Building";
 import Register from "../components/Register";
+import backendUrl from "../components/Config";
 
 
 function Starter() {
     const [backendData, setBackendData] = useState([{}]);
 
     useEffect(() => {
-        fetch("https://luminary-backend.onrender.com/")
+        fetch(backendUrl)
             .then((res) => res.json())
             .then((data) => setBackendData(data));
     }, []);
