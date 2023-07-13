@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.css": "/Luminary-frontend/static/css/main.6c4ded62.css",
-    "main.js": "/Luminary-frontend/static/js/main.a2207315.js",
-    "static/media/flower.png": "/Luminary-frontend/static/media/flower.76df6206effc9fb7b28f.png",
-    "static/media/passwordEye.png": "/Luminary-frontend/static/media/passwordEye.fe4641c70574f8f8799f.png",
-    "index.html": "/Luminary-frontend/index.html",
-    "main.6c4ded62.css.map": "/Luminary-frontend/static/css/main.6c4ded62.css.map",
-    "main.a2207315.js.map": "/Luminary-frontend/static/js/main.a2207315.js.map"
+    "main.css": "/static/css/main.13b9b954.css",
+    "main.js": "/static/js/main.d4e1011d.js",
+    "static/media/flower.png": "/static/media/flower.76df6206effc9fb7b28f.png",
+    "static/media/profileIcon.png": "/static/media/profileIcon.d9d12aeea0813d8956f9.png",
+    "static/media/writeButton1.png": "/static/media/writeButton1.c66587e5fe271d0ccb3c.png",
+    "static/media/journalIcon.png": "/static/media/journalIcon.a87c9ee0aa32172a8255.png",
+    "static/media/passwordEye.png": "/static/media/passwordEye.fe4641c70574f8f8799f.png",
+    "static/media/homeIcon.png": "/static/media/homeIcon.3fa739d73575fc256fb4.png",
+    "index.html": "/index.html",
+    "main.13b9b954.css.map": "/static/css/main.13b9b954.css.map",
+    "main.d4e1011d.js.map": "/static/js/main.d4e1011d.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c4ded62.css",
-    "static/js/main.a2207315.js"
+    "static/css/main.13b9b954.css",
+    "static/js/main.d4e1011d.js"
   ]
 }
