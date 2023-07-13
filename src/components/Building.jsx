@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import SpinningFlower from './SpinningFlower';
 
 function Building() {
-    const [waitTime, setWaitTime] = useState(10);
+    const [waitTime, setWaitTime] = useState(30);
 
     useEffect(() => {
         const interval = setInterval(() => {
