@@ -10,6 +10,7 @@ import Profile from "../pages/Profile";
 import {frontendBaseName} from "./Config";
 
 function App() {
+    console.log(frontendBaseName);
     return (
         <>
             <Provider store={store}>
