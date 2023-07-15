@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Luminary-frontend/static/css/main.2d38df8f.css",
-    "main.js": "/Luminary-frontend/static/js/main.c1c5659c.js",
+    "main.js": "/Luminary-frontend/static/js/main.7aca1a18.js",
     "static/media/flower.png": "/Luminary-frontend/static/media/flower.76df6206effc9fb7b28f.png",
     "static/media/profileIcon.png": "/Luminary-frontend/static/media/profileIcon.d9d12aeea0813d8956f9.png",
     "static/media/writeButton1.png": "/Luminary-frontend/static/media/writeButton1.c66587e5fe271d0ccb3c.png",
@@ -10,10 +10,10 @@
     "static/media/homeIcon.png": "/Luminary-frontend/static/media/homeIcon.3fa739d73575fc256fb4.png",
     "index.html": "/Luminary-frontend/index.html",
     "main.2d38df8f.css.map": "/Luminary-frontend/static/css/main.2d38df8f.css.map",
-    "main.c1c5659c.js.map": "/Luminary-frontend/static/js/main.c1c5659c.js.map"
+    "main.7aca1a18.js.map": "/Luminary-frontend/static/js/main.7aca1a18.js.map"
   },
   "entrypoints": [
     "static/css/main.2d38df8f.css",
-    "static/js/main.c1c5659c.js"
+    "static/js/main.7aca1a18.js"
   ]
 }
