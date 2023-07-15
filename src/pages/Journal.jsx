@@ -64,9 +64,9 @@ function Journal() {
             </div>
             <div className="journalDatesContainer">
                 {journal.map((journalItem, index) => (
-                    <div onClick={() => showJournal(journalItem)} key={index}>
+                    <div key={index}>
                         <div className="journalDateContainer">
-                            <h1 className="journalDateDisplayed">{journalItem.date}</h1>
+                            <h1 onClick={() => showJournal(journalItem)}  className="journalDateDisplayed">{journalItem.date}</h1>
                         </div>
                     </div>
                 ))}
