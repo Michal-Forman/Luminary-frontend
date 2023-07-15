@@ -289,6 +289,7 @@ $registration-inputs-height: 45px;
 }
 
 .errorMessage {
+  margin-top: 0;
   color: $error-red;
   font-family: $main-font;
 }
@@ -306,7 +307,263 @@ $registration-inputs-height: 45px;
   }
 }
 
-.journalNavBar {
+.journalTitleContainer {
+  display: flex;
+  margin-top: 90px;
+  width: 100%;
+  height: 50px;
+  justify-content: center;
+}
+
+.journalTitle {
+}
+
+.writeButtonImage {
+  width: 100px;
+  height: 100px;
+  transition: transform 0.2s ease-in-out;
+  margin-bottom: 20px;
+  &:hover {
+    transform: matrix(1.2, 0, 0, 1.2, 0, 0);
+    cursor: pointer;
+  }
+}
+
+.writeButton {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+$create-journal-form-container-width: 500px;
+
+.journalFormContainer {
+  position: fixed;
+  top: 400px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $white;
+  border-radius: 10px;
+  width: $create-journal-form-container-width;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 2;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.createJournalTitle {
+  font-family: $main-font;
+  font-size: 2rem;
+  color: $dark-blue;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.createJournalTitleContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.createJournalMoodContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.journalFormContainer label {
+  font-family: $main-font;
+  font-size: 1.2rem;
+  color: $dark-blue;
+  margin-bottom: 10px;
+}
+
+#journalMood {
+  -webkit-appearance: none;
+  width: $create-journal-form-container-width - 100px;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+#journalMood::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: $light-blue;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#journalMood::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: $light-blue;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.createJournalContentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.journalContentInput {
+  width: $create-journal-form-container-width - 50px;
+  height: 300px;
+  border: 1px solid $light-blue;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: $main-font;
+  font-size: 1.2rem;
+  color: $dark-blue;
+  margin-bottom: 10px;
+  resize: none;
+}
+
+.createJournalButtonsContainer {
+  width: $create-journal-form-container-width - 27px;
+  height: $registration-inputs-height;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.whiteBackground {
+  background-color: $white;
+}
+
+.createJournalButton {
+  width: 45%;
+}
+
+.journalSubTitle {
+  font-family: $main-font;
+  font-size: 1.2rem;
+  color: $dark-blue;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.journalMoodStat {
+  font-family: $main-font;
+  font-size: 1.2rem;
+  color: $light-blue;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.journalMoodFace {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.journalScrollableText {
+  max-height: 300px; /* Adjust the height as needed */
+  overflow-y: auto;
+  padding: 0 20px 0 20px;
+}
+
+.journalContentText {
+  font-family: $main-font;
+  font-size: 1rem;
+  color: $dark-blue;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.journalReadOnlyGoBackButton {
+  width: 45%;
+  height: 50px;
+  background-color: $white;
+  border: 2px solid $light-blue;
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+    cursor: pointer;
+  }
+}
+
+.journalReadOnlyButtonsContainer {
+  position: absolute;
+  top: 630px;
+  width: $create-journal-form-container-width - 40px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.journalDeleteButton {
+  width: 45%;
+  height: 50px;
+  color: $error-red;
+  border: 2px solid $error-red;
+  background-color: $white;
+}
+
+.journalDatesContainer {
+  width: $create-journal-form-container-width;
+  margin-top: 30px;
+  margin-left: calc(50% - $create-journal-form-container-width / 2);
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+}
+
+.journalDateDisplayed {
+  font-family: $main-font;
+  font-size: 1.2rem;
+  color: $white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.journalDateContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $light-blue;
+}
+
+.navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -323,26 +580,27 @@ $registration-inputs-height: 45px;
   z-index: 1;
 }
 
-.journalTitle {
-  position: absolute;
-  top: 70px;
-  left: 50%;
-  transform: translateX(-50%);
+.navbar a {
+  position: relative;
 }
 
-.writeButtonImage {
-  width: 100px;
-  height: 100px;
+.navbar a.active {
+  border-bottom: 2px solid $light-blue;
+  transition: border-bottom 0.3s ease;
 }
 
-.writeButton {
-  position: absolute;
-  transition: transform 0.2s ease-in-out;
-  top: calc(50% - 50px);
-    left: calc(50% - 50px);
-
-  &:hover {
-    transform: matrix(1.2, 0, 0, 1.2, 0, 0);
-    cursor: pointer;
+@keyframes change {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
+
+.animatedJournal {
+  animation: change 0.5s ease;
+}
+
+
+

@@ -44,16 +44,15 @@ function Register() {
             });
 
             if (response.ok) {
-                const dataWithoutPassword = { password, ...data };
-                delete dataWithoutPassword.password;
+                const jsonData = await response.json();
+
                 // Handle successful response
-                console.log(dataWithoutPassword);
                 console.log("Registration successful!");
                 // Update global registration state
                 try {
                     dispatch({
                         type: 'REGISTER_SUCCESS',
-                        payload: {user: dataWithoutPassword}, // Pass the user data to the action payload
+                        payload: {user: jsonData.message}, // Pass the user data to the action payload
                     });
                 } catch (error) {
                     console.log("Error:", error);

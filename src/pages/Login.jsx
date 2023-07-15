@@ -45,7 +45,6 @@ function Login() {
                 // Handle successful response
                 console.log("Login successful!");
                 const jsonData = await response.json();
-                console.log("User data:", jsonData.message);
                 // Update global registration state
                 try {
                     dispatch({
