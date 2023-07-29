@@ -5,7 +5,9 @@ function Profile() {
     return (
         <>
             <Navbar />
-            <h1>Profile</h1>
+            <div className="titleContainer">
+                <h1 className="title">Profile</h1>
+            </div>
         </>
     );
 }

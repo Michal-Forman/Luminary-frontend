@@ -17,7 +17,9 @@ function Home() {
 
     return (
         <div>
-            <h1>Home</h1>
+            <div className="titleContainer">
+                <h1 className="title">Home</h1>
+            </div>
             {user && (
                 <>
                     <Navbar />
@@ -26,7 +28,6 @@ function Home() {
                     <h2>{user.lastName}</h2>
                     <h2>{user.password}</h2>
                     <h2>{user._id}</h2>
-                    <Link to="/journal"><img className="icon" src={require("../IMG/journalIcon.png")} /> </Link>
                 </>
             )}
         </div>

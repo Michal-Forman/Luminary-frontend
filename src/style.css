@@ -64,7 +64,7 @@ h2.loadingText {
   gap: 20px;
 }
 
-.registerTitle {
+.title {
   color: #EEEEEE;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -282,7 +282,7 @@ h2.loadingText {
   transform: matrix(1.2, 0, 0, 1.2, 0, 0);
 }
 
-.journalTitleContainer {
+.titleContainer {
   display: flex;
   margin-top: 90px;
   width: 100%;
@@ -567,6 +567,150 @@ h2.loadingText {
 }
 .animatedJournal {
   animation: change 0.5s ease;
+}
+
+.habitTrackerImage {
+  width: 100px;
+  height: 100px;
+  transition: transform 0.2s ease-in-out;
+  margin-bottom: 20px;
+}
+.habitTrackerImage:hover {
+  transform: matrix(1.2, 0, 0, 1.2, 0, 0);
+  cursor: pointer;
+}
+
+.habitFormNameContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.habitFormNameInput {
+  width: 150px;
+  height: 30px;
+  border: 1px solid #00ADB5;
+  border-radius: 5px;
+  padding: 0 10px 0 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: #222831;
+  margin-bottom: 10px;
+}
+
+.habitFormDailyGoalInput {
+  width: 60px;
+  height: 30px;
+  border: 1px solid #00ADB5;
+  border-radius: 5px;
+  padding: 0 10px 0 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: #222831;
+  margin-bottom: 10px;
+}
+
+.habitFormContainer {
+  height: 350px;
+}
+
+.habitFormButtonsContainer {
+  width: 460px;
+  margin-top: 20px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.workoutFormWeightInput {
+  width: 60px;
+  height: 30px;
+  border: 1px solid #00ADB5;
+  border-radius: 5px;
+  padding: 0 10px 0 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: #222831;
+  margin-bottom: 10px;
+}
+
+.repetitionsTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  color: #222831;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.workoutFormRepetitionsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 500px;
+}
+
+.repetitionsDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.subtitleDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.exercisesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.exerciseContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.ExercisesText {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  color: #EEEEEE;
+  margin: 0;
+}
+
+.exerciseParamContainer {
+  width: 133px;
+  height: 50px;
+  padding: 10px;
+}
+
+.workoutFormButtonContainer {
+  margin-left: 20px;
+}
+
+.workoutFormContainer {
+  height: 520px;
+}
+
+.ExerciseDeleteButton {
+  height: 45px;
+}
+
+.changeExerciseButton {
+  width: 130px;
 }
 
 /*# sourceMappingURL=style.css.map */

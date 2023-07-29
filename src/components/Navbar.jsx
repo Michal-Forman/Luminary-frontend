@@ -11,6 +11,12 @@ function Navbar() {
                 <NavLink to="/journal">
                     <img className="icon navBarIcon" src={require("../IMG/journalIcon.png")} alt="journal icon"/>
                 </NavLink>
+                <NavLink to={"/habit-tracker"}>
+                    <img className="icon navBarIcon" src={require("../IMG/habitTrackerIcon.png")} alt="habit icon"/>
+                </NavLink>
+                <NavLink to="/workout-tracker">
+                    <img className="icon navBarIcon" src={require("../IMG/workoutTrackerIcon.png")} alt="profile icon"/>
+                </NavLink>
                 <NavLink to="/profile">
                     <img className="icon navBarIcon" src={require("../IMG/profileIcon.png")} alt="profile icon"/>
                 </NavLink>

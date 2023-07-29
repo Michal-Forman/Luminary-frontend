@@ -34,10 +34,9 @@ function Journal() {
         fetchJournals();
     }, []); // Fetch journals on component mount
 
-    function handleWriteButtonClick() {
+    const handleWriteButtonClick = () => {
         setCreatingJournal(true);
     }
-
 
     const handleJournalFormSubmit = () => {
         setCreatingJournal(false);
@@ -59,8 +58,8 @@ function Journal() {
     return (
         <>
             <Navbar/>
-            <div className="journalTitleContainer">
-                <h1 className="journalTitle registerTitle">Journal</h1>
+            <div className="titleContainer">
+                <h1 className="title">Journal</h1>
             </div>
             <div className="journalDatesContainer">
                 {journal.map((journalItem, index) => (

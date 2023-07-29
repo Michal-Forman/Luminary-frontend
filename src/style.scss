@@ -78,7 +78,7 @@ $registration-inputs-height: 45px;
   gap: 20px;
 }
 
-.registerTitle {
+.title {
   color: $white;
   font-family: $main-font;
   font-weight: 400;
@@ -307,7 +307,7 @@ $registration-inputs-height: 45px;
   }
 }
 
-.journalTitleContainer {
+.titleContainer {
   display: flex;
   margin-top: 90px;
   width: 100%;
@@ -315,14 +315,12 @@ $registration-inputs-height: 45px;
   justify-content: center;
 }
 
-.journalTitle {
-}
-
 .writeButtonImage {
   width: 100px;
   height: 100px;
   transition: transform 0.2s ease-in-out;
   margin-bottom: 20px;
+
   &:hover {
     transform: matrix(1.2, 0, 0, 1.2, 0, 0);
     cursor: pointer;
@@ -602,5 +600,148 @@ $create-journal-form-container-width: 500px;
   animation: change 0.5s ease;
 }
 
+.habitTrackerImage {
+  width: 100px;
+  height: 100px;
+  transition: transform 0.2s ease-in-out;
+  margin-bottom: 20px;
 
+  &:hover {
+    transform: matrix(1.2, 0, 0, 1.2, 0, 0);
+    cursor: pointer;
+  }
+}
+
+.habitFormNameContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.habitFormNameInput {
+  width: 150px;
+  height: 30px;
+  border: 1px solid $light-blue;
+  border-radius: 5px;
+  padding: 0 10px 0 10px;
+  font-family: $main-font;
+  font-size: 1rem;
+  color: $dark-blue;
+  margin-bottom: 10px;
+}
+
+.habitFormDailyGoalInput {
+  width: 60px;
+  height: 30px;
+  border: 1px solid $light-blue;
+  border-radius: 5px;
+  padding: 0 10px 0 10px;
+  font-family: $main-font;
+  font-size: 1rem;
+  color: $dark-blue;
+  margin-bottom: 10px;
+}
+
+.habitFormContainer {
+  height: 350px;
+}
+
+.habitFormButtonsContainer {
+  width: $create-journal-form-container-width - 40px;
+  margin-top: 20px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.workoutFormWeightInput {
+  width: 60px;
+  height: 30px;
+  border: 1px solid $light-blue;
+  border-radius: 5px;
+  padding: 0 10px 0 10px;
+  font-family: $main-font;
+  font-size: 1rem;
+  color: $dark-blue;
+  margin-bottom: 10px;
+}
+
+.repetitionsTitle {
+  font-family: $main-font;
+  font-size: 1.5rem;
+  color: $dark-blue;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.workoutFormRepetitionsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 500px;
+}
+
+.repetitionsDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.subtitleDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.exercisesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.exerciseContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.ExercisesText {
+  font-family: $main-font;
+  font-size: 1.5rem;
+  color: $white;
+  margin: 0;
+}
+
+.exerciseParamContainer {
+  width: 133px;
+  height: 50px;
+  padding: 10px;
+}
+
+.workoutFormButtonContainer {
+  margin-left: 20px;
+}
+
+.workoutFormContainer {
+  height: 520px;
+}
+
+.ExerciseDeleteButton {
+  height: 45px;
+}
+
+.changeExerciseButton {
+  width: 130px;
+}
 

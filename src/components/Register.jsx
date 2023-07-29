@@ -74,7 +74,7 @@ function Register() {
         <div>
             <form className="registerForm" onSubmit={handleSubmit}>
                 <div className="titleDiv">
-                    <h1 className="registerTitle">Register</h1>
+                    <h1 className="title">Register</h1>
                 </div>
                 <div className="emailDiv">
                     <label htmlFor="emailInput">email:</label>

@@ -46,7 +46,7 @@ const JournalReadOnly = ({journal, handleGoBack, handleDeleteJournal}) => {
                     <p className="journalContentText">{journal.content}</p>
                 </div>
                 <div className="journalReadOnlyButtonsContainer">
-                    <button className="secondaryButton journalDeleteButton" onClick={deleteJournal}>Delete</button>
+                    <button className="secondaryButton journalDeleteButton" onClick={deleteJournal}>delete</button>
                     <button className="journalReadOnlyGoBackButton secondaryButton" onClick={handleGoBack}>Back</button>
                 </div>
             </div>
