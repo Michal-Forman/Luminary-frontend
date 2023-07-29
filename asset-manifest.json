@@ -1,19 +1,22 @@
 {
   "files": {
-    "main.css": "/Luminary-frontend/static/css/main.2d38df8f.css",
-    "main.js": "/Luminary-frontend/static/js/main.7aca1a18.js",
+    "main.css": "/Luminary-frontend/static/css/main.d8919467.css",
+    "main.js": "/Luminary-frontend/static/js/main.c2f05c21.js",
     "static/media/flower.png": "/Luminary-frontend/static/media/flower.76df6206effc9fb7b28f.png",
     "static/media/profileIcon.png": "/Luminary-frontend/static/media/profileIcon.d9d12aeea0813d8956f9.png",
+    "static/media/habitTrackerIcon.png": "/Luminary-frontend/static/media/habitTrackerIcon.40e610f22d8c8125018d.png",
     "static/media/writeButton1.png": "/Luminary-frontend/static/media/writeButton1.c66587e5fe271d0ccb3c.png",
     "static/media/journalIcon.png": "/Luminary-frontend/static/media/journalIcon.a87c9ee0aa32172a8255.png",
+    "static/media/workoutTrackerIcon.png": "/Luminary-frontend/static/media/workoutTrackerIcon.3dc69d266d2739b20284.png",
+    "static/media/addHabitButton.png": "/Luminary-frontend/static/media/addHabitButton.3243709f50483e37b9c4.png",
     "static/media/passwordEye.png": "/Luminary-frontend/static/media/passwordEye.fe4641c70574f8f8799f.png",
     "static/media/homeIcon.png": "/Luminary-frontend/static/media/homeIcon.3fa739d73575fc256fb4.png",
     "index.html": "/Luminary-frontend/index.html",
-    "main.2d38df8f.css.map": "/Luminary-frontend/static/css/main.2d38df8f.css.map",
-    "main.7aca1a18.js.map": "/Luminary-frontend/static/js/main.7aca1a18.js.map"
+    "main.d8919467.css.map": "/Luminary-frontend/static/css/main.d8919467.css.map",
+    "main.c2f05c21.js.map": "/Luminary-frontend/static/js/main.c2f05c21.js.map"
   },
   "entrypoints": [
-    "static/css/main.2d38df8f.css",
-    "static/js/main.7aca1a18.js"
+    "static/css/main.d8919467.css",
+    "static/js/main.c2f05c21.js"
   ]
 }
