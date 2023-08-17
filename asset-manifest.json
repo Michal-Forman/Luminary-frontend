@@ -1,22 +1,28 @@
 {
   "files": {
-    "main.css": "/Luminary-frontend/static/css/main.d8919467.css",
-    "main.js": "/Luminary-frontend/static/js/main.c2f05c21.js",
+    "main.css": "/Luminary-frontend/static/css/main.ef9673b9.css",
+    "main.js": "/Luminary-frontend/static/js/main.262c7a59.js",
+    "static/media/johnLogo.png": "/Luminary-frontend/static/media/johnLogo.976dd838193e0804712c.png",
+    "static/media/therapist.png": "/Luminary-frontend/static/media/therapist.8e863004db6a35595204.png",
+    "static/media/logo-no-bg.png": "/Luminary-frontend/static/media/logo-no-bg.065570cef5e040c3b245.png",
+    "static/media/logo.png": "/Luminary-frontend/static/media/logo.fb6739e574ae3df70489.png",
     "static/media/flower.png": "/Luminary-frontend/static/media/flower.76df6206effc9fb7b28f.png",
     "static/media/profileIcon.png": "/Luminary-frontend/static/media/profileIcon.d9d12aeea0813d8956f9.png",
     "static/media/habitTrackerIcon.png": "/Luminary-frontend/static/media/habitTrackerIcon.40e610f22d8c8125018d.png",
     "static/media/writeButton1.png": "/Luminary-frontend/static/media/writeButton1.c66587e5fe271d0ccb3c.png",
+    "static/media/anonym.png": "/Luminary-frontend/static/media/anonym.a6143582309785dca610.png",
     "static/media/journalIcon.png": "/Luminary-frontend/static/media/journalIcon.a87c9ee0aa32172a8255.png",
     "static/media/workoutTrackerIcon.png": "/Luminary-frontend/static/media/workoutTrackerIcon.3dc69d266d2739b20284.png",
+    "static/media/chatTherapistIcon.png": "/Luminary-frontend/static/media/chatTherapistIcon.2c7dc425862393e9d851.png",
     "static/media/addHabitButton.png": "/Luminary-frontend/static/media/addHabitButton.3243709f50483e37b9c4.png",
     "static/media/passwordEye.png": "/Luminary-frontend/static/media/passwordEye.fe4641c70574f8f8799f.png",
     "static/media/homeIcon.png": "/Luminary-frontend/static/media/homeIcon.3fa739d73575fc256fb4.png",
     "index.html": "/Luminary-frontend/index.html",
-    "main.d8919467.css.map": "/Luminary-frontend/static/css/main.d8919467.css.map",
-    "main.c2f05c21.js.map": "/Luminary-frontend/static/js/main.c2f05c21.js.map"
+    "main.ef9673b9.css.map": "/Luminary-frontend/static/css/main.ef9673b9.css.map",
+    "main.262c7a59.js.map": "/Luminary-frontend/static/js/main.262c7a59.js.map"
   },
   "entrypoints": [
-    "static/css/main.d8919467.css",
-    "static/js/main.c2f05c21.js"
+    "static/css/main.ef9673b9.css",
+    "static/js/main.262c7a59.js"
   ]
 }
