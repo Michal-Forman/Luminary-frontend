@@ -5,6 +5,7 @@ import {useSelector} from "react-redux";
 import {useNavigate} from "react-router-dom";
 import backendUrl from "../components/Config";
 import ExerciseChanger from "../components/ExerciseChanger";
+import ProgressionReadOnly from "../components/ProgressionReadOnly";
 
 function WorkoutTracker() {
 
@@ -24,8 +25,11 @@ function WorkoutTracker() {
 
     const [creatingExercise, setCreatingExercise] = useState(false);
     const [exercises, setExercises] = useState([{}]);
+    const [exerciseProgressionData, setExerciseProgressionData] = useState([{}]);
+    const [showingProgression, setShowingProgression] = useState(false);
     const [makingChanges, setMakingChanges] = useState(false);
     const [selectedExercise, setSelectedExercise] = useState(null);
+    const [selectedExerciseProgressionName, setSelectedExerciseProgressionName] = useState(null);
 
     const fetchExercises = () => {
         fetch(`${backendUrl}/exercise/${user._id}`)
@@ -33,7 +37,6 @@ function WorkoutTracker() {
             .then((data) => setExercises(data))
             .catch((error) => {
                 console.error(error);
-                // Handle any fetch errors here
             });
     };
 
@@ -43,7 +46,6 @@ function WorkoutTracker() {
 
     const handleBackClick = () => {
         setCreatingExercise(false);
-        console.log("back button clicked");
     }
 
     const handleExerciseFormSubmit = () => {
@@ -66,14 +68,38 @@ function WorkoutTracker() {
         setMakingChanges(false);
     }
 
+    const handleExerciseProgressionBackClick = () => {
+        setShowingProgression(false);
+    }
+
+    const handleShowProgression = async (event, exerciseId, exerciseName) => {
+        event.stopPropagation();
+        setSelectedExerciseProgressionName(exerciseName);
+        try {
+            const response = await fetch(`${backendUrl}/exercise_progression/${exerciseId}`);
+            if (response.ok) {
+                const data = await response.json();
+                setExerciseProgressionData(data);
+                setShowingProgression(true);
+                console.log("Fetched data:", data); // Log the fetched data here
+            } else {
+                console.error("Failed to fetch data");
+            }
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
     return (
         <>
             <Navbar/>
             <div className="titleContainer">
                 <h1 className="title">Workout Tracker</h1>
+                {exerciseProgressionData && console.log(exerciseProgressionData)}
             </div>
             <div className="exercisesContainer">
                 {exercises.map((exercise, index) => (
+                    <>
                     <div className="exerciseContainer" key={index} onClick={() => showOptions(exercise)}>
                         <div className="exerciseNameDiv journalDateContainer exerciseParamContainer">
                             <h2 className="journalDateDisplayed">{exercise.name}</h2>
@@ -86,8 +112,9 @@ function WorkoutTracker() {
                             <h2 className="journalDateDisplayed">{exercise.repetition2}-</h2>
                             <h2 className="journalDateDisplayed">{exercise.repetition3}</h2>
                         </div>
-
+                        <button onClick={(event) => handleShowProgression(event, exercise._id, exercise.name)} className="primaryButton showProgressButton">show progress</button>
                     </div>
+                    </>
                 ))}
             </div>
             <div className="writeButton">
@@ -107,6 +134,13 @@ function WorkoutTracker() {
                     <ExerciseChanger handleBackClick={handleExerciseChangingBackClick} exercise={selectedExercise} handleDeleteExercise={handleDeleteExercise}/>
                 </>
 
+            ) : (
+                <></>)}
+            {showingProgression ? (
+                <>
+                    <div className="modalOverlay"></div>
+                    <ProgressionReadOnly handleExerciseProgressionBackClick={handleExerciseProgressionBackClick} exerciseProgressionData={exerciseProgressionData} exerciseName={selectedExerciseProgressionName}/>
+                </>
             ) : (
                 <></>)}
         </>

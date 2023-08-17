@@ -17,6 +17,9 @@ function Navbar() {
                 <NavLink to="/workout-tracker">
                     <img className="icon navBarIcon" src={require("../IMG/workoutTrackerIcon.png")} alt="profile icon"/>
                 </NavLink>
+                <NavLink to="/chat-therapist">
+                    <img className="icon navBarIcon" src={require("../IMG/chatTherapistIcon.png")} alt="profile icon"/>
+                </NavLink>
                 <NavLink to="/profile">
                     <img className="icon navBarIcon" src={require("../IMG/profileIcon.png")} alt="profile icon"/>
                 </NavLink>

@@ -10,6 +10,7 @@ import Journal from "../pages/Journal";
 import Profile from "../pages/Profile";
 import HabitTracker from "../pages/HabitTracker";
 import WorkoutTracker from "../pages/WorkoutTracker";
+import ChatTherapist from "../pages/ChatTherapist";
 
 function App() {
     console.log(frontendBaseName);
@@ -25,6 +26,7 @@ function App() {
                         <Route exact path="/profile" element={<Profile/>} />
                         <Route exact path="/habit-tracker" element={<HabitTracker/>} />
                         <Route exact path="/workout-tracker" element={<WorkoutTracker/>} />
+                        <Route exact path="/chat-therapist" element={<ChatTherapist/>}/>
                     </Routes>
                 </Router>
             </Provider>
